@@ -24,7 +24,6 @@ end
 
 def input_to_index(user_input)
   index = user_input.to_i - 1
-  return index
 end
 
 def move(board, index, character = "X")
@@ -33,7 +32,7 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  user_input = gets.chomp.to_i
+  user_input = gets.chomp
   input_to_index(user_input)
   while valid_move?(board, index) == false
     turn(board)

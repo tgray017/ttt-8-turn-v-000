@@ -36,6 +36,7 @@ def turn(board)
   index = input_to_index(user_input)
   while valid_move?(board, index) == false
     turn(board)
+    break
   end
   move(board, index, character = "X")
   display_board(board)
